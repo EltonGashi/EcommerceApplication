@@ -1,0 +1,10 @@
+services:
+  project:
+    container_name: ecommerce_container
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - DATABASE_URL=sqlite:////code/db.sqlite3
